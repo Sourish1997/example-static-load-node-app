@@ -1,10 +1,10 @@
 /**
  * Created by Sourish on 30-04-2017.
  */
-console.time("Execution Time");
-var fs = require("fs");
+console.time('Execution Time');
+var fs = require('fs');
 
-var data = fs.readFileSync('output.txt');
+var data = fs.readFileSync('files/output.txt');
 var urls = data.toString().split(' ');
 var uniqueUrls = [];
 
@@ -21,10 +21,10 @@ for(var i = 0; i < urls.length; i++) {
 }
 console.log(uniqueUrls);
 
-fs.writeFileSync("output.txt", "");
+fs.writeFileSync('files/output.txt', '');
 for(var i = 0; i < uniqueUrls.length - 1; i++) {
-    fs.appendFileSync("output.txt", uniqueUrls[i] + " ");
+    fs.appendFileSync('files/output.txt', uniqueUrls[i] + ' ');
 }
-fs.appendFileSync("output.txt", uniqueUrls[i]);
+fs.appendFileSync('files/output.txt', uniqueUrls[i]);
 
-console.timeEnd("Execution Time");
+console.timeEnd('Execution Time');
