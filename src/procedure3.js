@@ -7,6 +7,7 @@ var qr = require('qr-image');
 
 var data = fs.readFileSync('files/output.txt');
 var urls = data.toString().split(' ');
+console.log(urls.length);
 
 for(var i = 0; i < urls.length; i++) {
     var code = qr.image(urls[i], { type: 'svg' });

@@ -20,6 +20,7 @@ for(var i = 0; i < urls.length; i++) {
         uniqueUrls.push(urls[i]);
 }
 console.log(uniqueUrls);
+console.log(uniqueUrls.length);
 
 fs.writeFileSync('files/output.txt', '');
 for(var i = 0; i < uniqueUrls.length - 1; i++) {

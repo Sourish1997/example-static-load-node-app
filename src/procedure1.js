@@ -10,7 +10,7 @@ var re = 'http(s)*:\/\/(.)*(\.)(com|org|net|int|edu|gov|mil|in|au|jp|ca|cn|us|kr
 var urls = [];
 
 for(var i = 0; i < namesList.length; i++) {
-    var data = fs.readFileSync('files/' + namesList[i]);
+    var data = fs.readFileSync('files/input_files/' + namesList[i]);
     var wordsList = data.toString().split(' ');
 
     for (var j = 0; j < wordsList.length; j++) {
